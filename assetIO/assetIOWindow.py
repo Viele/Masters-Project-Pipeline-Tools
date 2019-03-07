@@ -22,7 +22,7 @@ if __name__ == "__main__":
     except:
         pass
 
-    assetIOWindow = assetIOWindow.AssetIOWindow()
+    assetIOWindow = assetIOWindow.AssetIOWindow(envVar="???")
     assetIOWindow.show()
     
 '''
