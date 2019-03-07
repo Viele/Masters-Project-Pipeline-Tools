@@ -196,8 +196,7 @@ class AssetIOCore(object):
         referencePath = absolutePath = os.path.join(self.workspacePath, self.libraryFolder, assetCategory, assetName)
 
         if environmentVariable:
-            referencePath = absolutePath.replace(self.workspacePath, environmentVariable)
-            print referencePath
+            referencePath = absolutePath.replace(self.workspacePath, '$'+environmentVariable)
 
         if not os.path.exists(absolutePath):
             raise Exception ('Asset %s does not exist' %absolutePath)
